@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://tvpl2dopx7m7"]
+[gd_scene load_steps=22 format=3 uid="uid://tvpl2dopx7m7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfw83"]
 albedo_color = Color(0.588235, 0.94902, 0.878431, 1)
@@ -12,6 +12,7 @@ albedo_color = Color(0.588235, 0.94902, 0.878431, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_ng1pu"]
 material = SubResource("StandardMaterial3D_c8gti")
 custom_aabb = AABB(2.08165e-12, 2, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+size = Vector2(2, 1.8)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d5nre"]
 
@@ -65,14 +66,21 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_6usp5")
 size = Vector3(0.05, 0.4, 0.05)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pfsv"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hj3pd"]
+material = SubResource("StandardMaterial3D_5pfsv")
+size = Vector3(0.05, 0.4, 0.5)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="wall1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.44172, 0.896787, 0.0256289, -0.174163, 0.113739, -0.978126, -0.880086, 0.427594, 0.206428, -0.273279, -0.396562, 0.517997)
+transform = Transform3D(0.44172, 0.896787, 0.0256289, -0.174163, 0.113739, -0.978126, -0.880086, 0.427594, 0.206428, -0.273279, -0.536289, 0.468225)
 mesh = SubResource("PlaneMesh_85p4j")
 
 [node name="wall2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.967054, -0.228873, 0.111463, 0.185433, 0.333315, -0.924401, 0.174418, 0.914614, 0.364774, 1.01507, -0.516119, -0.421229)
+transform = Transform3D(0.967054, -0.228873, 0.111463, 0.185433, 0.333315, -0.924401, 0.174418, 0.914614, 0.364774, 1.05872, -0.631535, -0.421229)
 mesh = SubResource("PlaneMesh_ng1pu")
 
 [node name="floor" type="MeshInstance3D" parent="."]
@@ -102,7 +110,7 @@ transform = Transform3D(0.406944, 0.904032, -0.130853, 0.424645, -0.0603975, 0.9
 mesh = SubResource("BoxMesh_4x3we")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.937839, -0.15803, -0.309005, 0.25491, 0.91785, 0.304257, 0.235539, -0.364113, 0.901079, 1.15245, -0.756548, 0.311865)
+transform = Transform3D(0.937111, -0.156911, -0.311771, 0.25491, 0.91785, 0.304257, 0.238419, -0.364597, 0.900126, 1.15245, -0.769844, 0.300049)
 mesh = SubResource("PlaneMesh_kw1qp")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
@@ -120,3 +128,17 @@ mesh = SubResource("BoxMesh_d7egt")
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0.000977382, 0, -0.000977384, 1, 0.952687, -0.755679, 1.11581)
 mesh = SubResource("BoxMesh_d7egt")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.167875, -0.188273, 0.967663, -0.0985478, 0.973471, 0.206499, -0.98087, -0.130027, 0.144868, 1.21878, -0.653572, 0.0681196)
+mesh = SubResource("BoxMesh_hj3pd")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.152095, 0.277126, 0.94872, -0.888448, -0.382231, 0.254084, 0.433043, -0.881533, 0.188077, 1.17755, -0.713681, 0.322987)
+mesh = SubResource("BoxMesh_hj3pd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.644694, -0.333429, 0.323848)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.551557, -0.106142, 1.91385)
