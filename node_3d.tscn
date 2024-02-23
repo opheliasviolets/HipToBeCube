@@ -44,10 +44,7 @@ material = SubResource("StandardMaterial3D_vcvp0")
 size = Vector3(0.05, 0.3, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4x3we"]
-size = Vector3(0.1, 0.1, 0.3)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_kw1qp"]
-size = Vector2(1.5, 0.6)
+size = Vector3(0.1, 0.1, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kaard"]
 albedo_color = Color(0.662745, 0.415686, 0.223529, 1)
@@ -72,6 +69,9 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_hj3pd"]
 material = SubResource("StandardMaterial3D_5pfsv")
 size = Vector3(0.05, 0.4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wr2aq"]
+size = Vector3(1.5, 0.05, 0.3)
 
 [node name="Node3D" type="Node3D"]
 
@@ -102,16 +102,12 @@ transform = Transform3D(0.182458, 0.405333, 0.895775, -0.92319, -0.242826, 0.297
 mesh = SubResource("BoxMesh_bevro")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.406944, 0.904032, -0.130853, 0.424645, -0.0603975, 0.903343, 0.808748, -0.423177, -0.408471, 1.69288, -0.829453, 0.473018)
+transform = Transform3D(0.406944, 0.904032, -0.130853, 0.424645, -0.0603975, 0.903343, 0.808748, -0.423177, -0.408471, 1.69288, -0.963167, 0.473018)
 mesh = SubResource("BoxMesh_4x3we")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.406944, 0.904032, -0.130853, 0.424645, -0.0603975, 0.903343, 0.808748, -0.423177, -0.408471, 0.755254, -1.10906, 0.221)
 mesh = SubResource("BoxMesh_4x3we")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.937111, -0.156911, -0.311771, 0.25491, 0.91785, 0.304257, 0.238419, -0.364597, 0.900126, 1.15245, -0.769844, 0.300049)
-mesh = SubResource("PlaneMesh_kw1qp")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.435992, -0.162901, 0.885084, -0.136032, 0.960252, 0.243745, -0.88961, -0.226671, 0.396503, 0.942957, -0.604701, 0.954458)
@@ -130,15 +126,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0.000977382, 0, -0.000977384, 1, 0.952687
 mesh = SubResource("BoxMesh_d7egt")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.167875, -0.188273, 0.967663, -0.0985478, 0.973471, 0.206499, -0.98087, -0.130027, 0.144868, 1.21878, -0.653572, 0.0681196)
+transform = Transform3D(0.0378348, -0.120989, 0.991933, -0.112294, 0.985841, 0.124529, -0.992955, -0.116099, 0.0237131, 1.17945, -0.544042, 0.178684)
 mesh = SubResource("BoxMesh_hj3pd")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.152095, 0.277126, 0.94872, -0.888448, -0.382231, 0.254084, 0.433043, -0.881533, 0.188077, 1.17755, -0.713681, 0.322987)
+transform = Transform3D(0.192508, 0.192211, 0.962288, -0.888448, -0.382231, 0.254084, 0.416653, -0.903855, 0.0971874, 1.17755, -0.611464, 0.390631)
 mesh = SubResource("BoxMesh_hj3pd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.644694, -0.333429, 0.323848)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.551557, -0.106142, 1.91385)
+transform = Transform3D(0.957687, -0.00818753, 0.287695, -0.0399465, 0.986139, 0.16104, -0.285026, -0.165718, 0.944086, 1.38901, 0.166436, 2.66551)
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.997052, -0.0765624, -0.00502917, 0.0765614, 0.997065, -0.000386179, 0.00504398, 0, 0.999987, 1.13699, -0.72567, 0.3324)
+mesh = SubResource("BoxMesh_wr2aq")
